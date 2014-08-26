@@ -1,4 +1,4 @@
-class Layouts::ApplicationPresenter < CommonPresenter
+class ApplicationLayout < Curly::Presenter
   presents :posts
 
   def content
