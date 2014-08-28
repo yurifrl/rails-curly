@@ -1,11 +1,11 @@
+<!-- app/views/layouts/application.html.curly -->
 <!DOCTYPE html>
 <html>
 <head>
-  <title>RailsCurly</title>
+  <title>{{title}}</title>
+
 </head>
 <body>
-
 {{content}}
-
 </body>
 </html>
