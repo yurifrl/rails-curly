@@ -4,16 +4,4 @@ class CommonPresenter < Curly::Presenter
   def posts
     @posts
   end
-
-  class PostPresenter < Curly::Presenter
-    presents :post
-
-    def title
-      @post.title
-    end
-
-    def content
-      @post.content
-    end
-  end
 end
