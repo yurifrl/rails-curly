@@ -1,7 +1,10 @@
 class CommonPresenter < Curly::Presenter
-  presents :posts
-
-  def posts
-    @posts
+  # This doesn't work
+  def posts(title: nil, max_size: nil, min_size: nil)
+    if title
+      Post.where title: title || []
+    else
+      Post.all
+    end
   end
 end

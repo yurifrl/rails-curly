@@ -1,19 +1,12 @@
 <h1>Listing posts</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Content</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    {{*posts}}
-      <tr>
-        <td>{{title}}</td>
-        <td>{{content}}</td>
-      </tr>
-    {{/posts}}
-  </tbody>
-</table>
+{{*posts}}
+  Title: {{title}} <br/>
+  Content: {{content}}  <br/>
+  Comments: <br> <br/> <br/>
+  {{*comments}}
+    Title: {{title}} <br>
+    Content: {{content}} <br> <br/> <br/>
+  {{/comments}}
+  <hr/>
+{{/posts}}

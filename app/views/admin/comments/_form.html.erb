@@ -1,0 +1,31 @@
+<%= form_for([:admin, @comment]) do |f| %>
+    <% if @comment.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@comment.errors.count, "error") %> prohibited this admin_comment from being saved:</h2>
+          <ul>
+            <% @comment.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :post_id %>
+      <br>
+      <%= f.select :post_id, options_for_select(Post.all.map{|o| [o.title, o.id]})%>
+    </div>
+    <div class="field">
+      <%= f.label :title %>
+      <br>
+      <%= f.text_field :title %>
+    </div>
+    <div class="field">
+      <%= f.label :content %>
+      <br>
+      <%= f.text_area :content %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>
